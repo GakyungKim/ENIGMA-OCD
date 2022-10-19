@@ -32,7 +32,7 @@ siteROC %>% str()
 #############################################################################
 siteROC$Site <-  factor(Site, levels = Site)
 
-ggplot(data = siteROC, aes(x = Site, y = meanAUC, color = Site)) + 
+ggplot(data = siteROC, aes(x = Site, y = meanAUC, color = Site)) + #800 800
   geom_crossbar(aes(x = Site, ymin = lowAUC, ymax = highAUC), width = 0.3) + 
   scale_x_discrete(limits = rev(levels(siteROC$Site))) +
   coord_flip() +
